@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$USER_HOME$/Desktop/python-spider-demo/.idea/http.iml" filepath="$USER_HOME$/Desktop/python-spider-demo/.idea/http.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/python-spider-demo.iml" filepath="$PROJECT_DIR$/.idea/python-spider-demo.iml" />
     </modules>
   </component>
 </project>

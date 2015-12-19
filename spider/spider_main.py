@@ -3,14 +3,16 @@ from spider import url_manager, html_downloader, html_outputer, html_parser
 
 class SpiderMain(object):
     """爬虫入口"""
+    # 初始化 url管理器，HTML文档下载器，解析器，输出器
     def __init__(self):
         self.urls = url_manager.UrlManager()
         self.downloader = html_downloader.HtmlDownloader()
         self.parser = html_parser.HtmlParser()
         self.outputer = html_outputer.HtmlOutputer()
 
-
-    def craw(self, root_url):
+    # 初始url
+    # spider_sum抓取数目
+    def craw(self, root_url, spider_sum=10):
         count = 1
         self.urls.add_new_url(root_url)
         while self.urls.has_new_url():
@@ -24,7 +26,7 @@ class SpiderMain(object):
                 # print('craw success {0} : {1}'.format(count, new_url))
                 count = count + 1
 
-                if count > 10:
+                if count > spider_sum:
                     break
 
             except Exception as e:
